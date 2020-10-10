@@ -21,7 +21,6 @@ export default function Form(props) {
               name="city"
               autoComplete="off"
               placeholder="City"
-              // onChange={}
             />
           </div>
           <div className="col-md-3">
@@ -34,7 +33,7 @@ export default function Form(props) {
             />
           </div>
           <div className="col-md-3 mt-md-0 text-md-left">
-            <button className="btn btn-warning">Get Analysis</button>
+            <button className="btn btn-warning">Get Weather</button>
           </div>
         </div>
       </form>

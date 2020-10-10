@@ -23,7 +23,7 @@ function App() {
   const weatherAPIKey = "f90d5a820e8d2575fa1641a874d0e39a";
 
   const weatherIcon = {
-    Thunderstorn: "wi-thunderstorm",
+    Thunderstorm: "wi-thunderstorm",
     Drizzle: "wi-sleet",
     Rain: "wi-storm-showers",
     Snow: "wi-snow",
@@ -46,7 +46,7 @@ function App() {
         url: `http://api.openweathermap.org/data/2.5/weather?q=${city},${province},&appid=${weatherAPIKey}`,
         method: "GET",
       }).then((response) => {
-        console.log("Hello", response.data);
+        /* console.log("Hello", response.data); */
         setCityName(response.data.name);
         setCountryCode(response.data.sys.country);
 
@@ -63,7 +63,7 @@ function App() {
 
     const getWeatherIcon = function (iconId) {
       if (iconId >= 200 && iconId <= 232) {
-        icon = weatherIcon.Thunderstorn;
+        icon = weatherIcon.Thunderstorm;
         return icon;
       } else if (iconId >= 300 && iconId <= 321) {
         icon = weatherIcon.Drizzle;

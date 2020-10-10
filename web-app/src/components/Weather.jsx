@@ -5,17 +5,12 @@ export default function Weather(props) {
     if (min && max) {
       return (
         <h3>
-          Min Temp<span className="px-4">{Math.round(min - 273)}&deg;c</span>
-          Max Temp<span className="px-4">{Math.round(max - 273)}&deg;c</span>
+          Min Temp:<span className="px-4">{Math.round(min - 273)}&deg;c</span>
+          Max Temp:<span className="px-4">{Math.round(max - 273)}&deg;c</span>
         </h3>
       );
     }
   }
-  /*
-  <h1>
-          {props.city}, {props.province}, {props.country}.
-        </h1>
-  */
   return (
     <div className="container">
       <div className="cards pt-4">
@@ -31,7 +26,7 @@ export default function Weather(props) {
           <h1 className="py-2">{Math.round(props.temp - 273)}&deg;c</h1>
         ) : null}
 
-        {/** showing max and minimum temp*/}
+        {/** showing max and min temp*/}
         {minmaxTemp(props.minTemp, props.maxTemp)}
 
         <h4 className="py-3">{props.description}</h4>
